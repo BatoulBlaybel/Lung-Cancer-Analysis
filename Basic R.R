@@ -8,6 +8,7 @@ library(purrr)
 library(BaylorEdPsych)
 library(mvnmle)
 library(mice)
+library(readxl)
 setwd("C:/Users/USER/OneDrive/Desktop/STAT504-AM/PROJECTS")
 projdata <- read_excel("C:\\Users\\USER\\OneDrive\\Desktop\\STAT504-AM\\PROJECTS\\PROJECT 1\\DataProject.xlsx")
 to_factor <- c("Gender", "AgeGroup", "Other", "Smoker", "AbstinenceStatus", "HBV", "HCV", 
