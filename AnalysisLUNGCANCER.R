@@ -692,3 +692,156 @@ cox_model <- coxph(
 
 
 summary(cox_model)
+
+
+
+
+#IN CASE THE GRAPHS OF KAPLIN MEIER ARE NOT ALL DISPLAYED (in the above for loop), WE KAN DO IT FOR EACH FACTOR SEPERATLY.
+
+
+# # 1. Gender
+# km_fit1 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Gender, data = projdata)
+# ggsurvplot(km_fit1, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Gender")
+# log_rank_result1 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Gender, data = projdata)
+# print("Log-Rank Test for Gender")
+# print(log_rank_result1)
+
+# # 2. AgeGroup
+# km_fit2 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ AgeGroup, data = projdata)
+# ggsurvplot(km_fit2, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for AgeGroup")
+# log_rank_result2 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ AgeGroup, data = projdata)
+# print("Log-Rank Test for AgeGroup")
+# print(log_rank_result2)
+
+# # 3. Smoker
+# km_fit3 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Smoker, data = projdata)
+# ggsurvplot(km_fit3, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Smoker")
+# log_rank_result3 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Smoker, data = projdata)
+# print("Log-Rank Test for Smoker")
+# print(log_rank_result3)
+
+# # 4. AbstinenceStatus
+# km_fit4 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ AbstinenceStatus, data = projdata)
+# ggsurvplot(km_fit4, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for AbstinenceStatus")
+# log_rank_result4 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ AbstinenceStatus, data = projdata)
+# print("Log-Rank Test for AbstinenceStatus")
+# print(log_rank_result4)
+
+# # 5. HBV
+# km_fit5 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ HBV, data = projdata)
+# ggsurvplot(km_fit5, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for HBV")
+# log_rank_result5 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ HBV, data = projdata)
+# print("Log-Rank Test for HBV")
+# print(log_rank_result5)
+
+# # 6. HCV
+# km_fit6 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ HCV, data = projdata)
+# ggsurvplot(km_fit6, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for HCV")
+# log_rank_result6 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ HCV, data = projdata)
+# print("Log-Rank Test for HCV")
+# print(log_rank_result6)
+
+# # 7. Other
+# km_fit7 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Other, data = projdata)
+# ggsurvplot(km_fit7, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Other")
+# log_rank_result7 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Other, data = projdata)
+# print("Log-Rank Test for Other")
+# print(log_rank_result7)
+
+# # 8. Screening
+# km_fit8 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Screening, data = projdata)
+# ggsurvplot(km_fit8, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Screening")
+# log_rank_result8 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Screening, data = projdata)
+# print("Log-Rank Test for Screening")
+# print(log_rank_result8)
+
+# # 9. Diabetes
+# km_fit9 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Diabetes, data = projdata)
+# ggsurvplot(km_fit9, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Diabetes")
+# log_rank_result9 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Diabetes, data = projdata)
+# print("Log-Rank Test for Diabetes")
+# print(log_rank_result9)
+
+# # 10. Alcohol_consumption
+# km_fit10 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Alcohol_consumption, data = projdata)
+# ggsurvplot(km_fit10, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Alcohol_consumption")
+# log_rank_result10 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Alcohol_consumption, data = projdata)
+# print("Log-Rank Test for Alcohol_consumption")
+# print(log_rank_result10)
+
+# # 11. Thrombosis
+# km_fit11 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Thrombosis, data = projdata)
+# ggsurvplot(km_fit11, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Thrombosis")
+# log_rank_result11 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Thrombosis, data = projdata)
+# print("Log-Rank Test for Thrombosis")
+# print(log_rank_result11)
+
+# # 12. Criteria
+# km_fit12 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Criteria, data = projdata)
+# ggsurvplot(km_fit12, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Criteria")
+# log_rank_result12 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Criteria, data = projdata)
+# print("Log-Rank Test for Criteria")
+# print(log_rank_result12)
+
+# # 13. CancerStages
+# km_fit13 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ CancerStages, data = projdata)
+# ggsurvplot(km_fit13, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for CancerStages")
+# log_rank_result13 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ CancerStages, data = projdata)
+# print("Log-Rank Test for CancerStages")
+# print(log_rank_result13)
+
+# # 14. DifuseCancer
+# km_fit14 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ DifuseCancer, data = projdata)
+# ggsurvplot(km_fit14, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for DifuseCancer")
+# log_rank_result14 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ DifuseCancer, data = projdata)
+# print("Log-Rank Test for DifuseCancer")
+# print(log_rank_result14)
+
+# # 15. MetastaticCancer
+# km_fit15 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ MetastaticCancer, data = projdata)
+# ggsurvplot(km_fit15, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for MetastaticCancer")
+# log_rank_result15 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ MetastaticCancer, data = projdata)
+# print("Log-Rank Test for MetastaticCancer")
+# print(log_rank_result15)
+
+# # 16. CurativeTreatment
+# km_fit16 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ CurativeTreatment, data = projdata)
+# ggsurvplot(km_fit16, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for CurativeTreatment")
+# log_rank_result16 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ CurativeTreatment, data = projdata)
+# print("Log-Rank Test for CurativeTreatment")
+# print(log_rank_result16)
+
+# # 17. Treatment1
+# km_fit17 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Treatment1, data = projdata)
+# ggsurvplot(km_fit17, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Treatment1")
+# log_rank_result17 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Treatment1, data = projdata)
+# print("Log-Rank Test for Treatment1")
+# print(log_rank_result17)
+
+# # 18. Treatment2
+# km_fit18 <- survfit(Surv(CorrectedSurvival12, DeathStatus) ~ Treatment2, data = projdata)
+# ggsurvplot(km_fit18, data = projdata, pval = TRUE, conf.int = TRUE, 
+           # title = "Kaplan-Meier Survival Curve for Treatment2")
+# log_rank_result18 <- survdiff(Surv(CorrectedSurvival12, DeathStatus) ~ Treatment2, data = projdata)
+# print("Log-Rank Test for Treatment2")
+# print(log_rank_result18)
+
+
+# # Continue similarly for other treatments...
